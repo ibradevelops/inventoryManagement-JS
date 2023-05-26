@@ -1,0 +1,49 @@
+$light-blue: #6ea8fe;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#src-icon,
+.close-icon {
+  font-size: 22px !important;
+}
+.close-icon {
+  cursor: pointer;
+}
+
+#sign-in-btn,
+#sign-up-btn,
+#sign-in-modal-btn,
+#signout-btn,
+#add-inventory-btn,
+.table-item-btn,
+.remove-item-inventory-btn,
+#add-inventory-item-btn,
+#sign-up-modal-btn {
+  &:active,
+  &:hover {
+    background-color: $light-blue;
+  }
+}
+
+#sign-in-modal,
+#sign-up-modal,
+#add-inventory-modal {
+  backdrop-filter: blur(5px);
+}
+
+td,
+td,
+thead,
+tbody,
+table,
+th {
+  border-bottom: none;
+}
+
+// classlist for toggling visibility
+.hide {
+  display: none !important;
+}
