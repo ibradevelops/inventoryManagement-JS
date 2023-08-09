@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="w-100 h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../scss/style.css" />
+    <script defer src="../js/dashboard.js"></script>
+    <title>Dashboard</title>
+  </head>
+  <body class="h-100 w-100 p-3 d-flex flex-column">
+    <div class="d-flex align-items-center justify-content-between mb-5">
+      <h2>Dashboard | Inventory Management</h2>
+      <button class="btn btn-ligth border-dark fw-bold" id="signout-btn">
+        Sign Out
+      </button>
+    </div>
+    <div class="d-flex flex-column gap-2 align-items-start flex-grow-1">
+      <h4 id="greeting-user-text"></h4>
+      <button class="btn btn-ligth border-dark fw-bold" id="add-inventory-btn">
+        📦 Add Inventory
+      </button>
+      <p class="no-inventory-message">No Inventory Found.</p>
+      <table class="table hide">
+        <thead>
+          <tr class="border-bottom">
+            <th>Title</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Warehouse</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="d-flex align-items-end justify-content-between border-top">
+      <div class="mt-2">
+        <div class="d-flex gap-2">
+          <p class="text-muted">Author</p>
+          <p class="fw-bold">Memišagić Ibrahim</p>
+        </div>
+        <div class="d-flex gap-2">
+          <p class="text-muted">Email</p>
+          <p class="fw-bold">imemisagic@gmail.com</p>
+        </div>
+      </div>
+      <div>
+        <p class="text-muted text-capitalize">
+          All rights reserved, &copy; Memišagić Ibrahim, 2023
+        </p>
+      </div>
+    </div>
+    <div
+      id="spinner"
+      class="spinner-border text-primary top-50 start-50 position-absolute hide"
+    ></div>
+    <!-- Add inventory modal -->
+    <div
+      id="add-inventory-modal"
+      class="fixed-top h-100 w-100 d-flex align-items-center justify-content-center hide"
+    >
+      <div class="bg-white w-25 p-4 border rounded d-flex flex-column gap-3">
+        <div class="d-flex align-items-center justify-content-between">
+          <h2 class="text-primary">Add Inventory</h2>
+          <ion-icon name="close-outline" class="close-icon"></ion-icon>
+        </div>
+        <div>
+          <p class="fw-bold">Title</p>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Title"
+            id="inventory-title"
+          />
+        </div>
+        <div class="position-relative">
+          <p class="fw-bold">Description</p>
+          <textarea
+            style="resize: none"
+            class="form-control"
+            placeholder="Description"
+            id="inventory-description"
+            rows="5"
+          ></textarea>
+        </div>
+        <div>
+          <p class="fw-bold">Quantity</p>
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Quantity"
+            id="inventory-quantity"
+          />
+        </div>
+        <div>
+          <p class="fw-bold">Warehouse</p>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Warehouse"
+            id="inventory-warehouse"
+          />
+        </div>
+        <p id="message" class="text-danger"></p>
+        <button
+          class="btn btn-light w-100 border-dark fw-bold mt-4"
+          id="add-inventory-item-btn"
+        >
+          Add Inventory
+        </button>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

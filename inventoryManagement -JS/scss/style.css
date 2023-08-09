@@ -1,0 +1,54 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#src-icon,
+.close-icon {
+  font-size: 22px !important;
+}
+
+.close-icon {
+  cursor: pointer;
+}
+
+#sign-in-btn:active, #sign-in-btn:hover,
+#sign-up-btn:active,
+#sign-up-btn:hover,
+#sign-in-modal-btn:active,
+#sign-in-modal-btn:hover,
+#signout-btn:active,
+#signout-btn:hover,
+#add-inventory-btn:active,
+#add-inventory-btn:hover,
+.table-item-btn:active,
+.table-item-btn:hover,
+.remove-item-inventory-btn:active,
+.remove-item-inventory-btn:hover,
+#add-inventory-item-btn:active,
+#add-inventory-item-btn:hover,
+#sign-up-modal-btn:active,
+#sign-up-modal-btn:hover {
+  background-color: #6ea8fe;
+}
+
+#sign-in-modal,
+#sign-up-modal,
+#add-inventory-modal {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+td,
+td,
+thead,
+tbody,
+table,
+th {
+  border-bottom: none;
+}
+
+.hide {
+  display: none !important;
+}/*# sourceMappingURL=style.css.map */
